@@ -1,0 +1,269 @@
+body {
+	font-family: "Avenir Next";
+	margin: 0;
+	line-height: 1.9em;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {
+	color: #2b96d5;
+}
+
+/* Typography */
+
+h2 {
+	font-size: 24px;
+	padding-bottom: 5px;
+	border-bottom:  4px solid #8EC4BB;
+	text-transform: uppercase;
+	font-weight: 500;
+	display: inline-block;
+}
+
+h3 {
+	font-size: 14px;
+	padding-bottom: 5px;
+	border-bottom:  4px solid #000;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+	display: inline-block;
+}
+
+/* Nav Bar */
+
+nav {
+	width: 100%;
+	display: flex;
+  	flex-flow: row wrap;
+  	justify-content: space-between;
+  	position: fixed;
+  	top: 0;
+  	overflow: hidden;
+  	background-color: #fff;
+  	z-index: 10;
+}
+
+.logo {
+	width: 100px;
+	height: 50px;
+	padding: 15px 40px;
+}
+
+.apply-button {
+	background-color: #8EC4BB;
+	padding: 10px 5px;
+	color: #fff;
+}
+
+.apply-button:hover {
+	-webkit-filter: brightness(0.9);
+	filter: brightness(0.9);
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #fff;
+	padding: 15px 40px;
+
+}
+
+ul.topnav li {
+	float: right;
+    margin: 0 30px;
+    padding: 15px 0 5px 0;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    width: 100px;
+}
+
+
+ul.topnav li:first-child {
+	padding: 5px 0;
+}
+
+ul.topnav li a:hover:not(:active) {background-color: #e3e3e3;}
+
+ul.topnav li a:active { border-bottom: 4px solid #8EC4BB;}
+
+ul.topnav li.right {float: right;}
+
+/* Header */
+
+.header {
+	margin-top: 100;
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.overlay {
+    position: absolute; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(144, 212, 255, 0.36); /* Black background with opacity */
+
+}
+
+.overlay__text {
+	position: absolute; /* Sit on top of the page content */
+    top: 50%;
+    color: #fff;
+    font-size: 45px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+
+}
+
+.header__pic {
+	flex: 1;
+	display: inline-block;
+}
+
+/* Containers */
+
+.content__wrapper {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.section__header {
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.teams__section {
+	margin: 50px 0 0 0;
+	background-color: #DFEBE9;
+	padding: 40px 10% 80px 10%;
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+
+}
+
+.row {
+	display: flex;
+	padding-top: 80px;
+}
+
+.row__item {
+	flex: 1;
+	padding: 10px 30px;
+}
+
+.row__full {
+	padding: 100px 30px;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 24px;
+	text-align: center;
+
+}
+
+.col__1 {
+	padding: 20px;
+}
+
+.col__2 {
+	flex: 1;
+	padding: 20px;
+}
+
+.col__2:first-child {
+	padding-left: 0;
+}
+
+.col__2:last-child {
+	padding-right: 0;
+}
+
+.footer {
+	/* position: absolute; */
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: #efefef;
+	text-align: center;
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 700px){
+    ul.topnav li.right,
+    ul.topnav li {
+    	float: none;
+    	margin: 0;
+    }
+
+    .row {
+		flex-flow: column wrap;
+		padding-top: 20px;
+	}
+
+
+    ul.topnav {
+    	padding-top: 0;
+    }
+
+    ul.topnav li a {
+    	width: 100%;
+    }
+
+    .content__wrapper {
+    	margin-top: 0;
+    	width: 95%;
+    }
+
+    .header {
+    	margin: 20px 0;
+    }
+
+    .overlay__text {
+    	font-size: 25px;
+    }
+
+    .teams__section {
+    	flex-direction: column;
+    }
+
+    .logo {
+    	margin: 0 auto;
+    	height: 30px;
+    	width: 60px;
+    	padding: 20px 0;
+    }
+
+    .teams__section {
+		padding: 20px 20px 0 20px;
+
+    }
+
+    nav {
+    	flex-direction: column;
+    	position: relative;
+    }
+
+}
