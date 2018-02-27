@@ -9,3 +9,10 @@ To obtain the hosted site on your local computer,
 Then to update the site from your local computer,
 
 `git push live +master:refs/head/master`
+
+
+If you want to log in without a password,
+
+`if [ ! -d ~/.ssh ]; then mkdir ~/.ssh; fi`
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh utk@apphost.ocf.berkeley.edu 'cat >> ~/.ssh/authorized_keys' < ~/.ssh/id_rsa.pub
